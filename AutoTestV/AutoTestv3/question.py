@@ -1,9 +1,6 @@
 from typeguard import typechecked
 
 
-
-
-
 class No_has_escrito_enunciado(ValueError):
     def __init__(self, mensaje):
         self.__mensaje = mensaje
@@ -26,6 +23,7 @@ class BaseScore_Error(Exception):
     def __init__(self, mensaje):
         self.__mensaje = mensaje
         super().__init__(mensaje)
+
 
 @typechecked
 class Question:
@@ -56,7 +54,6 @@ class Question:
     def __check_if_option_is_correct(self, chosen_option: int):
         if chosen_option > len(self.__choices):
             raise Options_Error("Esta opción no existe en esta pregunta")
-
 
     @property
     def name_question(self):
