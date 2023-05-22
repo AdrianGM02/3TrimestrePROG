@@ -1,0 +1,25 @@
+[
+ {
+  "name": "Pregunta 1",
+  "statement": "STATEMENT",
+  "options": [
+   [
+    "OPCION 1",
+    1.0
+   ],
+   [
+    "OPCION 2",
+    -0.25
+   ],
+   [
+    "OPCION 3",
+    -0.25
+   ],
+   [
+    "OPCION 4",
+    -0.25
+   ]
+  ],
+  "base_score": 1.0
+ }
+]

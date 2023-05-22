@@ -12,12 +12,12 @@ def crear_preguntas():
     for i in range(numero_preguntas):
         statement = input("Indica el enunciado de la pregunta: ")
         titulo = f"Pregunta {i + 1}:"
+        puntuacion_base = int(input("Introduce la puntuacion de la pregunta(0 para poner la puntuación por defecto): "))
         opciones = list()
         for j in range(NUM_OPTIONS):
             nombre_opcion = input("Indica el nombre de la opcion")
-            puntuacion_opcion = int(input("Indica la puntuacion de la opcion"))
+            puntuacion_opcion = float(input("Indica la puntuacion de la opcion"))
             opciones.append((nombre_opcion, puntuacion_opcion))
-        puntuacion_base = int(input("Introduce la puntuacion de la pregunta(0 para poner la puntuación por defecto): "))
         if puntuacion_base != 0:
             preguntas.append(Question(titulo, statement, opciones, puntuacion_base))
         else:
